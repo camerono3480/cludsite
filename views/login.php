@@ -1,5 +1,5 @@
 <?php
-require 'init__/__init__.php';
+require '../init__/__init__.php';
 if (isset($_POST['username'])&&isset($_POST['password'])) {
    $password = $_POST['password'];
    $username = $_POST['username'];
@@ -19,10 +19,9 @@ if (isset($_POST['username'])&&isset($_POST['password'])) {
 
         $sil = mysqli_fetch_assoc($sli);
         if ($_PASS == $sil['password']) {
-          echo "success";
            $_SESSION['user']=$username;
            $_SESSION['logged'] =  $username&&$_PASS;
-
+           header('location: /');
         }else {
           echo "error";
         }

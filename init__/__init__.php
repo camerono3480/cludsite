@@ -1,13 +1,13 @@
 <!-- file for global structure like db connections -->
 
 <?php
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $DB = "codeclub";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $DB);
+$conn = new mysqli($servername,$username ,$password, $DB);
 
 // Check connection
 if ($conn->connect_error) {
